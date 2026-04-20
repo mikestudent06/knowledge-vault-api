@@ -20,6 +20,10 @@ async createResource(@Param("collectionId") collectionId: number, @Body() body :
 async getCollections() {
   return await this.collectionsService.findAll();
  }
+@Get('tag/:tagName')
+async getCollectionsByTag(@Param('tagName') tagName: string) {
+  return await this.collectionsService.findCollectionsByTag(tagName);
+ }
 
  @Post(':id/resources') // Route: POST /collections/1/resources
   addResource(

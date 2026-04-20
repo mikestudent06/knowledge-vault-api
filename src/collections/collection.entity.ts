@@ -21,5 +21,5 @@ export class Collection {
 
   //This makes sure resources are always loaded
   @OneToMany(() => Resource, (resource) => resource.collection, { eager: true })
-resources: Resource[];
+  resources: Resource[];
 }
